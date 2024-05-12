@@ -54,12 +54,12 @@ ul.menu {
 .menu li {
   flex: 1;
   list-style-type: none;
-  font-size: 16px;
   font-family: "Barlow Condensed";
   text-align: center;
 }
 .menu li a {
   text-decoration: none;
+  font-size: 16px;
   color: #000;
   text-transform: uppercase;
 }
@@ -217,6 +217,16 @@ ul.menu {
   justify-items: center;
   text-align: center;
 }
+.cards-cruises {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .card {
   border: 1px solid lightgray;
   box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.3);
@@ -231,12 +241,12 @@ ul.menu {
   border-radius: 8px;
   cursor: pointer;
 }
-.cards .text {
+.cards .text , .cards-cruises{
   padding: 20px;
   font-family: Barlow Condensed;
   line-height: 50px;
 }
-.cards .card-box {
+.cards .card-box , .cards-cruises .card-box{
   display: flex;
   flex-flow: row;
   background-color: #ccff00;
@@ -246,16 +256,36 @@ ul.menu {
   justify-content: center;
   text-align: center;
 }
-.cards .time {
+.cards .time , .cards-cruises .time {
   flex: 1;
 }
-.cards .location {
+.cards .location , .cards-cruises .location {
   flex: 2;
 }
-.cards .cost {
+.cards .cost , .cards-cruises .cost{
   color: #4cafad;
   font-size: 20px;
 }
+
+
+.cruises-text {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.cruises-text small {
+  font-family: Roboto;
+  color: #ccff00;
+  font-size: 15px;
+  font-weight: bolder;
+}
+.cruises-text h2 {
+  font-family: Barlow Condensed;
+  font-size: 55px;
+  color: #191d34;
+  letter-spacing: 1px;
+}
+
+
 /*------------Zoom in Photos--------------*/
 .zoom-img {
   float: left;
@@ -328,7 +358,8 @@ ul.menu {
   line-height: 30px;
   color: #506172;
   font-weight: bolder;
-  padding: 50px 0;
+  padding: 30px 0;
+  text-align: justify;
 }
 .about-text a {
   background-color: #fff;
@@ -477,6 +508,9 @@ ul.menu {
   .places-text {
     margin-top: 200px;
   }
+  .cruises-text {
+    margin-top: 200px;
+  }
 }
 @media all and (max-width: 928px) {
   .banner .form input,
@@ -493,12 +527,15 @@ ul.menu {
   .places .card-box p {
     font-size: 14px;
   }
+  .cruises .card-box p {
+    font-size: 14px;
+  }
 }
 @media all and (max-width: 1086px) {
-  .places .cards .text {
+  .places .cards .text , .cruises .cards-cruises .text{
     line-height: 40px;
   }
-  .cards .text .h2 {
+  .cards .text .h2 , .cards-cruises .text .h2{
     font-size: 12px;
   }
   .cards .img-card img {
@@ -512,12 +549,17 @@ ul.menu {
     grid-template-rows: repeat(6, 1fr);
     grid-gap: 20px;
   }
+  .cards-cruises {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
   .card {
     width: 300px;
     height: 500px;
     margin: auto;
   }
-  .cards .text {
+  .cards .text , .cards-cruises .text{
     padding: 5px;
     font-family: Barlow Condensed;
   }
@@ -566,4 +608,13 @@ ul.menu {
     justify-content: center;
     align-items: center;
   }
+}
+
+
+.booking-message {
+  background-color: #4CAF50; /* Green background color */
+  color: white; /* White text color */
+  padding: 15px; /* Padding around the message */
+  margin-top: 20px; /* Margin from the top */
+  border-radius: 5px; /* Rounded corners */
 }
