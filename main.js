@@ -3,7 +3,7 @@ async function book() {
     const date = document.getElementById('dateInput').value;
     console.log(place, date)
     try {
-        const response = await fetch('http://localhost:3000/bookings', {
+        const response = await fetch('https://final-project-backend-0igk.onrender.com/bookings', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
